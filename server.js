@@ -3,6 +3,17 @@ const PORT = process.env.PORT || 3500;
 const express = require('express');
 const { Console } = require('console');
 const app =express()
+
+//built in middleware hadle urlencoded data 
+//in other words  , form data 
+app.use(express.urlencoded({extended:false}))
+
+//built in middleware for json
+app.use(express.json())
+
+//serve static file 
+app.use(express.static(path.join(__dirname,'/public')))
+
 app.get('^/$|/index(.html)?',(req,res)=>{
     res.sendFile( './views/index.html',{root:__dirname})
 })
@@ -11,7 +22,7 @@ app.get('/newpage(.html)?',(req,res)=>{
 })
 app.get('/oldpage(.html)?',(req,res)=>{
     res.redirect( './new-page.html')
-})
+}) 
 
 //Routers
 app.get('/hello(.html)?',(req,res,next)=>{
