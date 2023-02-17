@@ -21,4 +21,22 @@ app.get('/hello(.html)?',(req,res,next)=>{
      res.send("hello woprld!")
    } 
 )
+//chain route handlers 
+const one = (req,res,next)=>{
+    console.log("one")
+    next()
+}
+const two = (req,res,next)=>{
+    console.log("two ")
+    next()
+}
+const three = (req,res,next)=>{
+    console.log("three")
+    res.send("finished")
+}
+app.get('/chain(.html)?',[one,two,three])
+
+app.get('/*',(req,res)=>{
+    res.status(404).sendFile( './views/404.html',{root:__dirname})
+})
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
