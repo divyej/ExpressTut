@@ -25,3 +25,7 @@
 20230218	16:01:52	ef7af8b4-fade-4e78-9571-c62c7256d644	GET	undefined	/index
 20230218	16:02:21	d4b8fb24-c8c3-409d-9623-31ac7eccf5c1	GET	undefined	/index
 20230218	16:02:21	9bb07197-4463-43e4-8ced-c6840ae6b768	GET	undefined	/css/style.css
+20230218	16:52:56	094e7bd3-efd5-41c8-a246-87cfca335032	GET	undefined	/404
+20230218	16:52:56	9b710e2e-a966-43bf-935f-1ca70b2e4c73	GET	undefined	/css/style.css
+20230218	16:53:31	9ce52f10-77b9-4df3-880a-6748c09e6d10	GET	undefined	/404
+20230218	16:53:31	994eb4a4-51fb-4036-89eb-c2c1cffc420a	GET	undefined	/css/style.css
