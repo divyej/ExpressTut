@@ -1,8 +1,15 @@
 const path = require('path');
 const PORT = process.env.PORT || 3500;
+const logEvents= require('./middlware/logEvents.js')
 const express = require('express');
 const { Console } = require('console');
 const app =express()
+//custom middleware
+app.use((req,res,next)=>{
+logEvents(`${req.method }\t${req.headers.origin}\t${req.url}`,'reqLog.txt')
+ console.log(`${req.method}${req.path}`)
+ next()
+})
 
 //built in middleware hadle urlencoded data 
 //in other words  , form data 
