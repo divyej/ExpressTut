@@ -36,6 +36,7 @@ app.use(express.json())
 
 //serve static file 
 app.use(express.static(path.join(__dirname,'/public')))
+app.use('/subdir',require('./routes/subdir.js'))
 
 app.get('^/$|/index(.html)?',(req,res)=>{
     res.sendFile( './views/index.html',{root:__dirname})
@@ -71,7 +72,17 @@ const three = (req,res,next)=>{
 app.get('/chain(.html)?',[one,two,three])
 
 app.all('*',(req,res)=>{
-    res.status(404).sendFile( './views/404.html',{root:__dirname})
+    res.status(404)
+    if(req.accepts('html')){
+       res.sendFile( './views/404.html',{root:__dirname})
+    }
+    else if(req.accepts('json'))
+    {
+      res.json({error:"error 404 not found"})  
+    }
+    else {
+        res.type('txt').send("404 not found")
+    }
 })
 //error handler 
 app.use(errorHandler)

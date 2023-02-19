@@ -29,3 +29,13 @@
 20230218	16:52:56	9b710e2e-a966-43bf-935f-1ca70b2e4c73	GET	undefined	/css/style.css
 20230218	16:53:31	9ce52f10-77b9-4df3-880a-6748c09e6d10	GET	undefined	/404
 20230218	16:53:31	994eb4a4-51fb-4036-89eb-c2c1cffc420a	GET	undefined	/css/style.css
+20230219	23:35:40	998aec85-d865-4eca-9232-a0ce2fad1fd9	GET	undefined	/404
+20230219	23:36:11	6ad9aa5d-a5da-4d87-9104-6e3148fe8704	GET	undefined	/
+20230219	23:36:11	6393d037-8cdb-4aab-9d6d-0d3ea44869a3	GET	undefined	/css/style.css
+20230219	23:36:22	95b2c686-7f9a-4fed-80ca-990f8d8d2001	GET	undefined	/
+20230219	23:36:22	9e085b75-e2f5-4e88-b53a-272b1dd750e5	GET	undefined	/css/style.css
+20230219	23:36:26	2eba5903-4a72-4d59-900b-de2f9bce2388	GET	undefined	/jnjf
+20230219	23:38:56	67dd7cb8-7bef-444a-a83e-7b96971fd956	GET	undefined	/jnjf
+20230219	23:38:56	371ade45-5be6-4ad4-97c8-114c79d89952	GET	undefined	/css/style.css
+20230219	23:39:07	ead19666-36f0-45bc-b5ec-6a05f6484aa2	GET	undefined	/subdir
+20230219	23:39:11	2a816b65-7a89-44ed-9399-4687a6366733	GET	undefined	/subdir/test
