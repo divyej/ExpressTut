@@ -42,6 +42,9 @@ app.use('/',require('./routes/root.js'))
 
 app.use('/subdir',require('./routes/subdir.js'))
 
+app.use('/employees',require('./routes/api/employees.js'))
+
+
 
 app.all('*',(req,res)=>{
     res.status(404)
