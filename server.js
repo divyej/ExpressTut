@@ -35,41 +35,13 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
 //serve static file 
-app.use(express.static(path.join(__dirname,'/public')))
+app.use('/',express.static(path.join(__dirname,'/public')))
+app.use('/subdir',express.static(path.join(__dirname,'/public')))
+
+app.use('/',require('./routes/root.js'))
+
 app.use('/subdir',require('./routes/subdir.js'))
 
-app.get('^/$|/index(.html)?',(req,res)=>{
-    res.sendFile( './views/index.html',{root:__dirname})
-})
-app.get('/newpage(.html)?',(req,res)=>{
-    res.sendFile( './views/new-page.html',{root:__dirname})
-})
-app.get('/oldpage(.html)?',(req,res)=>{
-    res.redirect( './new-page.html')
-}) 
-
-//Routers
-app.get('/hello(.html)?',(req,res,next)=>{
-   console.log("attempted to call hello" )
-   next()}
-   ,(req,res)=>{
-     res.send("hello woprld!")
-   } 
-)
-//chain route handlers 
-const one = (req,res,next)=>{
-    console.log("one")
-    next()
-}
-const two = (req,res,next)=>{
-    console.log("two ")
-    next()
-}
-const three = (req,res,next)=>{
-    console.log("three")
-    res.send("finished")
-}
-app.get('/chain(.html)?',[one,two,three])
 
 app.all('*',(req,res)=>{
     res.status(404)
