@@ -64,3 +64,12 @@
 20230220	20:52:18	cd211205-e592-4365-9fdb-07956c528f53	GET	undefined	/employees/1
 20230220	20:52:22	e723dce1-a73d-40c8-b32b-f3ad4b777231	GET	undefined	/employees/1
 20230220	20:52:47	922b21aa-6e98-4134-bba8-d8a8c85618de	GET	undefined	/employees/1
+20230310	19:19:17	b7d3f5d9-ce69-4ab5-8405-bb6097f9cd99	GET	undefined	/
+20230310	19:19:17	a612a10a-a3a9-423e-bdee-7bc0341a5f48	GET	undefined	/css/style.css
+20230310	19:19:18	53bc89ec-ce8c-4ced-bef7-dd1f5213601d	GET	undefined	/favicon.ico
+20230310	19:19:49	d5b7f3d6-be34-4c7f-a077-482389fd9885	GET	undefined	/employees
+20230310	19:20:54	d127673f-c169-4190-82be-36991c67cee3	POST	undefined	/employees
+20230310	19:21:42	5cb70c9b-583f-440e-bb03-4a6a6fc6888d	PUT	undefined	/employees
+20230310	19:22:17	626cf8e0-b348-49e8-a9f3-1b6429c2191d	DELETE	undefined	/employees
+20230310	19:22:29	2a93e2f2-62d5-4bb9-93c9-4ff008b4b452	GET	undefined	/employees
+20230310	19:22:38	ae9941db-e053-45ca-b847-1e3ac1b30abe	GET	undefined	/employees/1
