@@ -1,6 +1,7 @@
 const path = require('path');
 const PORT = process.env.PORT || 3500;
 const cors = require('cors')
+const verifyJWT=require('./middlware/verifyJWT')
 const corsOptions=require('./config/corsOptioon')
 const {logger}= require('./middlware/logEvents.js')
 const errorHandler=require ('./middlware/errorHandler.js')
@@ -24,7 +25,8 @@ app.use('/',express.static(path.join(__dirname,'/public')))
 
 app.use('/',require('./routes/root.js'))
 app.use('/register',require('./routes/register'))
-
+app.use('/auth',require('./routes/auth'))
+app.use(verifyJWT)
 app.use('/employees',require('./routes/api/employees.js'))
 
 app.all('*',(req,res)=>{
