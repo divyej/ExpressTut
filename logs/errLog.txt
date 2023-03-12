@@ -6,3 +6,5 @@
 20230220	20:51:15	f62b03a5-af50-4d3b-a4e8-d8bdb2da74f3	SyntaxError:Unexpected end of JSON input
 20230220	20:52:18	9138abc2-1e37-46e0-b7cf-3cd2b51faf77	SyntaxError:Unexpected end of JSON input
 20230220	20:52:22	0dca110c-c19b-400a-a200-b34be5d58f88	SyntaxError:Unexpected end of JSON input
+20230312	20:00:38	ba4bd089-888e-4fd1-986f-730333b6e3f3	TypeError:res.sendStatus is not a function
+20230312	20:04:19	43cb8fa4-c432-43cf-822e-aece8a64249b	TypeError:res.sendStatus is not a function
