@@ -4,6 +4,7 @@ const cors = require('cors')
 const verifyJWT=require('./middlware/verifyJWT')
 const corsOptions=require('./config/corsOptioon')
 const {logger}= require('./middlware/logEvents.js')
+const cookieParser= require('cookie-parser')
 const errorHandler=require ('./middlware/errorHandler.js')
 const express = require('express');
 const { Console } = require('console');
@@ -16,9 +17,12 @@ app.use(cors(corsOptions))
 //built in middleware hadle urlencoded data 
 //in other words  , form data 
 app.use(express.urlencoded({extended:false}))
+//
 
 //built in middleware for json
 app.use(express.json())
+//
+app.use(cookieParser())
 
 //serve static file 
 app.use('/',express.static(path.join(__dirname,'/public')))
@@ -26,6 +30,7 @@ app.use('/',express.static(path.join(__dirname,'/public')))
 app.use('/',require('./routes/root.js'))
 app.use('/register',require('./routes/register'))
 app.use('/auth',require('./routes/auth'))
+app.use('/refresh',require('./routes/refresh'))
 app.use(verifyJWT)
 app.use('/employees',require('./routes/api/employees.js'))
 
